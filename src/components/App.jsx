@@ -9,6 +9,7 @@ export function App() {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
         <Route path="movies" element={<Movie />} />
+        <Route path="*" />
       </Route>
     </Routes>
   );
