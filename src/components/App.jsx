@@ -8,7 +8,8 @@ export function App() {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-        <Route path="movies" element={<Movie />} />
+        <Route path="/movies" element={<Movie />} />
+
         <Route path="*" />
       </Route>
     </Routes>

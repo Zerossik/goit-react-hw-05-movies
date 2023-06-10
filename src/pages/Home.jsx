@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
+
 import { getDate } from 'movies-api/movies';
+import { MovieList } from 'components/MovieList/MovieList';
 
 const Home = () => {
-  const [data, setdata] = useState([]);
+  const [data, setData] = useState([]);
+
   useEffect(() => {
-    console.log('выполнился эффект');
     getDate()
-      .then(({ data: { results } }) => console.log(results))
+      .then(({ data: { results } }) => setData(results))
       .catch(err => console.log(err));
-  });
-  console.log(data);
-  return <h2>Hello World </h2>;
+  }, []);
+  return <MovieList items={data} />;
 };
 
 export default Home;
