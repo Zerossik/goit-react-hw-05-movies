@@ -1,4 +1,4 @@
-import { movieDetailsApi } from 'movies-api/movieDetailsAPI';
+import { movieDetailsApi } from '../../movies-api/movies';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
