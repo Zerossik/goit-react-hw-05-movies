@@ -1,4 +1,4 @@
-const Button = (text, onClick) => {
+export const Button = ({ text, onClick }) => {
   return (
     <button type="button" onClick={onClick}>
       {text}
