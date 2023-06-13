@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     getDate()
       .then(({ data: { results } }) => setData(results))
-      .catch(err => console.log(err));
+      .catch(err => new Error(err));
   }, []);
   return <MovieList items={data} />;
 };

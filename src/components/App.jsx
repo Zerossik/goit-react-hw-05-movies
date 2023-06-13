@@ -11,7 +11,7 @@ export function App() {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-        <Route path="movies" element={<Movie />} />
+        <Route path="movies" element={<Movie />}></Route>
         <Route path="movies/:id" element={<MovieDetails />}>
           <Route path="Cast" element={<Cast />} />
           <Route path="Reviews" element={<Reviews />} />

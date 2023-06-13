@@ -1,7 +1,13 @@
-export const MovieInput = () => {
+export const MovieInput = ({ query, handlerChange }) => {
   return (
-    <form>
-      <input type="text" name="query" autoFocus />
-    </form>
+    <input
+      type="text"
+      name="query"
+      autoFocus
+      value={query}
+      onChange={({ target: { value } }) => {
+        handlerChange(value);
+      }}
+    />
   );
 };
