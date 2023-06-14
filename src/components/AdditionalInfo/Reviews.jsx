@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getReviews } from 'movies-api/movies';
 import { useParams } from 'react-router-dom';
+import { StyledAuthorText, StyledList } from './AdditionalInfo.styled';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const { id } = useParams();
 
@@ -13,16 +14,18 @@ export const Reviews = () => {
   }, [id]);
 
   return (
-    <ul>
+    <StyledList>
       {!reviews.length
         ? console.log('нет данных')
         : reviews.map(({ author, content }) => {
             return (
               <li>
-                <p>{author}</p>
+                <StyledAuthorText>Author: {author}</StyledAuthorText>
+                <p>{content}</p>
               </li>
             );
           })}
-    </ul>
+    </StyledList>
   );
 };
+export default Reviews;

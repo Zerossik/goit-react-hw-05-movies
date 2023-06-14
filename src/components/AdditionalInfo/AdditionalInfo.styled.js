@@ -25,8 +25,11 @@ export const StyledAdditionalInfo = styled.ul`
   margin: 20px 0;
 `;
 
-export const ActorsList = styled.ul`
+export const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 30px;
+`;
+export const StyledAuthorText = styled.p`
+  font-weight: 700;
 `;

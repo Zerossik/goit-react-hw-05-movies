@@ -28,3 +28,32 @@ export const StyledLink = styled(Link)`
     color: #fff;
   }
 `;
+export const ErrorWrap = styled.div`
+  text-align: center;
+`;
+export const StatusCode = styled.p`
+  font-size: 120px;
+  font-weight: 700;
+`;
+
+export const DescriptionError = styled.p`
+  font-size: 36px;
+`;
+
+export const ErrorHomeLink = styled(Link)`
+  display: inline-block;
+  padding: 4px 8px;
+  margin-top: 10px;
+
+  color: black;
+  background-color: #ecf1f4;
+  font-size: 24px;
+  text-decoration: none;
+
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    background-color: grey;
+    color: #fff;
+  }
+`;

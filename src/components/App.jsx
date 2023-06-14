@@ -2,9 +2,10 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Movie from '../pages/Movie';
 import SharedLayout from './SharedLayout/SharedLayout';
-import { MovieDetails } from '../pages/MovieDetails';
-import { Actors } from './AdditionalInfo/Actors';
-import { Reviews } from './AdditionalInfo/Reviews';
+import MovieDetails from '../pages/MovieDetails';
+import Actors from './AdditionalInfo/Actors';
+import Reviews from './AdditionalInfo/Reviews';
+import NotFound from 'pages/NotFound';
 
 export function App() {
   return (
@@ -17,7 +18,7 @@ export function App() {
           <Route path="Reviews" element={<Reviews />} />
         </Route>
 
-        <Route path="*" />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

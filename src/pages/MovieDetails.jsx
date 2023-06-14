@@ -6,7 +6,7 @@ import { MovieDetailsWrap, MovieInfo, StyledLink } from './Pages.styled';
 import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
 import { Section } from 'components/Section/Section';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [data, setData] = useState({});
   const [error, setError] = useState('');
   const { id } = useParams();
@@ -64,3 +64,4 @@ export const MovieDetails = () => {
     </>
   );
 };
+export default MovieDetails;

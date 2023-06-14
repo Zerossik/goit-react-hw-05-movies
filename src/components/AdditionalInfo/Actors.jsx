@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getActors } from 'movies-api/movies';
 import avatar from '../../img/avatar.jpg';
-import { ActorsList } from './AdditionalInfo.styled';
+import { StyledList } from './AdditionalInfo.styled';
 
-export const Actors = () => {
+const Actors = () => {
   const [actors, setActors] = useState([]);
   const { id } = useParams();
   const basePath = 'https://image.tmdb.org/t/p/w200';
@@ -17,7 +17,7 @@ export const Actors = () => {
 
   return (
     <>
-      <ActorsList>
+      <StyledList>
         {actors.map(({ original_name, profile_path, id }) => {
           return (
             <li key={id}>
@@ -30,7 +30,8 @@ export const Actors = () => {
             </li>
           );
         })}
-      </ActorsList>
+      </StyledList>
     </>
   );
 };
+export default Actors;
