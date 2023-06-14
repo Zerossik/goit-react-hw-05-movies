@@ -3,7 +3,7 @@ import Home from '../pages/Home';
 import Movie from '../pages/Movie';
 import SharedLayout from './SharedLayout/SharedLayout';
 import { MovieDetails } from '../pages/MovieDetails';
-import { Cast } from './AdditionalInfo/Cast';
+import { Actors } from './AdditionalInfo/Actors';
 import { Reviews } from './AdditionalInfo/Reviews';
 
 export function App() {
@@ -13,7 +13,7 @@ export function App() {
         <Route index element={<Home />} />
         <Route path="movies" element={<Movie />}></Route>
         <Route path="movies/:id" element={<MovieDetails />}>
-          <Route path="Cast" element={<Cast />} />
+          <Route path="Actors" element={<Actors />} />
           <Route path="Reviews" element={<Reviews />} />
         </Route>
 

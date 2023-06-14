@@ -21,3 +21,9 @@ export function searchMovie(query) {
     options
   );
 }
+export function getActors(movieId) {
+  return axios(
+    `https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US&api_key=819f545c7c1ea540af1ea0cb7410f83a`,
+    options
+  );
+}

@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
+import { StyledLink, StyledAdditionalInfo } from './AdditionalInfo.styled';
 export const AdditionalInfo = () => {
   return (
-    <ul>
+    <StyledAdditionalInfo>
       <li>
-        <Link to="Cast">Cast</Link>
+        <StyledLink to="Actors">Actors</StyledLink>
       </li>
       <li>
-        <Link to="Reviews">Reviews</Link>
+        <StyledLink to="Reviews">Reviews</StyledLink>
       </li>
-    </ul>
+    </StyledAdditionalInfo>
   );
 };

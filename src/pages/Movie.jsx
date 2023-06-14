@@ -1,4 +1,4 @@
-import { MovieInput } from 'components/AdditionalInfo/MovieInput/MovieInput';
+import { MovieInput } from 'components/MovieInput/MovieInput';
 import { useEffect, useState } from 'react';
 import { searchMovie } from 'movies-api/movies';
 import { useSearchParams } from 'react-router-dom';
