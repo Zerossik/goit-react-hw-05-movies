@@ -27,3 +27,10 @@ export function getActors(movieId) {
     options
   );
 }
+
+export function getReviews(movieId) {
+  return axios(
+    `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US&page=1&api_key=819f545c7c1ea540af1ea0cb7410f83a`,
+    options
+  );
+}

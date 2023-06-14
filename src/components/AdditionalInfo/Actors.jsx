@@ -8,12 +8,13 @@ export const Actors = () => {
   const [actors, setActors] = useState([]);
   const { id } = useParams();
   const basePath = 'https://image.tmdb.org/t/p/w200';
-  console.log(id);
 
   useEffect(() => {
-    getActors(id).then(({ data: { cast } }) => setActors(cast));
+    getActors(id)
+      .then(({ data: { cast } }) => setActors(cast))
+      .catch(err => console.log(err.message));
   }, [id]);
-  console.log(avatar);
+
   return (
     <>
       <ActorsList>
