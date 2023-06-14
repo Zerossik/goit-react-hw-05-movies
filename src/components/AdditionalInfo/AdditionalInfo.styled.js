@@ -24,3 +24,9 @@ export const StyledAdditionalInfo = styled.ul`
   gap: 20px;
   margin: 20px 0;
 `;
+
+export const ActorsList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;

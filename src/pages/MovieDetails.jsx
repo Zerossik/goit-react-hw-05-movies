@@ -1,7 +1,12 @@
 import { movieDetailsApi } from '../movies-api/movies';
 import { useEffect, useRef, useState } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
-import { MovieDetailsWrap, MovieInfo, StyledLink } from './Pages.styled';
+import {
+  MovieDetailsWrap,
+  MovieInfo,
+  StyledLink,
+  ActorsList,
+} from './Pages.styled';
 
 import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
 import { Section } from 'components/Section/Section';
