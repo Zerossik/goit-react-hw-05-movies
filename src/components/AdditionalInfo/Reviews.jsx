@@ -15,16 +15,18 @@ const Reviews = () => {
 
   return (
     <StyledList>
-      {!reviews.length
-        ? console.log('нет данных')
-        : reviews.map(({ author, content }) => {
-            return (
-              <li>
-                <StyledAuthorText>Author: {author}</StyledAuthorText>
-                <p>{content}</p>
-              </li>
-            );
-          })}
+      {!reviews.length ? (
+        <h2>no reviews</h2>
+      ) : (
+        reviews.map(({ author, content }) => {
+          return (
+            <li>
+              <StyledAuthorText>Author: {author}</StyledAuthorText>
+              <p>{content}</p>
+            </li>
+          );
+        })
+      )}
     </StyledList>
   );
 };

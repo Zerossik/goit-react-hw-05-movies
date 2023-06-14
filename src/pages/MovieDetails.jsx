@@ -1,5 +1,5 @@
 import { movieDetailsApi } from '../movies-api/movies';
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { MovieDetailsWrap, MovieInfo, StyledLink } from './Pages.styled';
 
@@ -56,7 +56,9 @@ const MovieDetails = () => {
             </MovieInfo>
           </MovieDetailsWrap>
           <AdditionalInfo />
-          <Outlet />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Outlet />
+          </Suspense>
         </Section>
       ) : (
         <h2>{error}</h2>
