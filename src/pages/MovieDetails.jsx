@@ -1,7 +1,13 @@
 import { movieDetailsApi } from '../movies-api/movies';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
-import { MovieDetailsWrap, MovieInfo, StyledLink } from './Pages.styled';
+import {
+  MovieDetailsWrap,
+  MovieInfo,
+  StyledLink,
+  MovieInfoText,
+  MovieInfoDesc,
+} from './Pages.styled';
 
 import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
 import { Section } from 'components/Section/Section';
@@ -32,26 +38,25 @@ const MovieDetails = () => {
                 <h2>{data.original_title}</h2>
               </li>
               <li>
-                <p style={{ fontWeight: 700 }}>
+                <MovieInfoText>
                   popularity:
-                  <span style={{ fontWeight: 500 }}>{data.popularity}</span>
-                </p>
+                  <MovieInfoDesc>{data.popularity}</MovieInfoDesc>
+                </MovieInfoText>
               </li>
               <li>
-                <p style={{ fontWeight: 700 }}>
-                  overview :
-                  <span style={{ fontWeight: 500 }}>{data.overview}</span>
-                </p>
+                <MovieInfoText>
+                  overview :<MovieInfoDesc>{data.overview}</MovieInfoDesc>
+                </MovieInfoText>
               </li>
               <li>
-                <p style={{ fontWeight: 700 }}>
+                <MovieInfoText>
                   genres :
-                  <span style={{ fontWeight: 500 }}>
+                  <MovieInfoDesc>
                     {Array.isArray(data.genres) && data.genres.length > 0
                       ? data.genres.map(({ name }) => name).join(', ')
                       : 'no genre info'}
-                  </span>
-                </p>
+                  </MovieInfoDesc>
+                </MovieInfoText>
               </li>
             </MovieInfo>
           </MovieDetailsWrap>

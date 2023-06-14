@@ -12,6 +12,13 @@ export const MovieInfo = styled.ul`
   gap: 20px;
 `;
 
+export const MovieInfoText = styled.p`
+  font-weight: 700;
+`;
+export const MovieInfoDesc = styled.span`
+  font-weight: 500;
+`;
+
 export const StyledLink = styled(Link)`
   display: inline-block;
   padding: 4px 8px;
