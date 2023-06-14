@@ -1,6 +1,7 @@
 import { movieDetailsApi } from '../movies-api/movies';
 import { useEffect, useRef, useState } from 'react';
 import { Outlet, useParams, Link, useLocation } from 'react-router-dom';
+import { MovieDetailsWrap, MovieInfo, StyledLink } from './Pages.styled';
 
 import { AdditionalInfo } from 'components/AdditionalInfo/AdditionalInfo';
 import { Section } from 'components/Section/Section';
@@ -21,12 +22,12 @@ export const MovieDetails = () => {
 
   return (
     <>
-      <Link to={goBack.current}>{'<- Go Back'}</Link>
+      <StyledLink to={goBack.current}>{'<- Go Back'}</StyledLink>
       {Object.keys(data).length !== 0 ? (
         <Section title="">
-          <img src={basePath + data.poster_path} alt={data.original_title} />
-          <div>
-            <ul>
+          <MovieDetailsWrap>
+            <img src={basePath + data.poster_path} alt={data.original_title} />
+            <MovieInfo>
               <li>
                 <h2>{data.original_title}</h2>
               </li>
@@ -52,8 +53,8 @@ export const MovieDetails = () => {
                   </span>
                 </p>
               </li>
-            </ul>
-          </div>
+            </MovieInfo>
+          </MovieDetailsWrap>
           <AdditionalInfo />
           <Outlet />
         </Section>
