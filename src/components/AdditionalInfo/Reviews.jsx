@@ -1,4 +1,4 @@
-import { cloneElement, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getReviews } from 'movies-api/movies';
 import { useParams } from 'react-router-dom';
 
